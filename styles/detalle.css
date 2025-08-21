@@ -1,0 +1,238 @@
+/* Estilos para la página de detalles de propiedad */
+.detalle-propiedad {
+    padding: 60px 0;
+}
+
+.detalle-header {
+    margin-bottom: 30px;
+}
+
+.detalle-titulo {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    color: var(--color-primario);
+}
+
+.detalle-ubicacion {
+    font-size: 1.2rem;
+    color: var(--color-texto-secundario);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.detalle-ubicacion i {
+    margin-right: 10px;
+    color: var(--color-acento);
+}
+
+.detalle-precio {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--color-acento);
+    margin-bottom: 20px;
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: rgba(var(--color-acento-rgb), 0.1);
+    border-radius: 5px;
+}
+
+.detalle-badge {
+    display: inline-block;
+    margin-left: 15px;
+    padding: 10px 15px;
+    background-color: var(--color-primario);
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.galeria-container {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.galeria-principal {
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.galeria-principal img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.galeria-miniaturas {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.miniatura {
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.miniatura.active {
+    border-color: var(--color-primario);
+}
+
+.miniatura img {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+}
+
+.detalle-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.detalle-descripcion {
+    line-height: 1.8;
+    color: var(--color-texto);
+    font-size: 1.1rem;
+}
+
+.detalle-info {
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.detalle-info h3 {
+    margin-bottom: 20px;
+    color: var(--color-primario);
+}
+
+.caracteristicas-lista {
+    list-style: none;
+    padding: 0;
+}
+
+.caracteristicas-lista li {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+}
+
+.caracteristicas-lista li:last-child {
+    border-bottom: none;
+}
+
+.caracteristicas-lista i {
+    margin-right: 15px;
+    color: var(--color-acento);
+    min-width: 20px;
+    text-align: center;
+}
+
+.detalle-contacto {
+    margin-top: 25px;
+    padding-top: 25px;
+    border-top: 1px solid #eee;
+}
+
+.btn-contacto {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.navegacion-propiedades {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.render-3d {
+    margin: 40px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 400px;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.render-3d iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.render-3d .placeholder {
+    text-align: center;
+    padding: 20px;
+}
+
+.render-3d .placeholder i {
+    font-size: 60px;
+    color: #ddd;
+    margin-bottom: 15px;
+}
+
+.render-3d .placeholder p {
+    color: #999;
+    font-size: 1.2rem;
+}
+
+.mapa-container {
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 40px 0;
+}
+
+.cargando {
+    text-align: center;
+    padding: 50px;
+    font-size: 1.2rem;
+    color: #999;
+}
+
+/* Estilos responsivos */
+@media (max-width: 992px) {
+    .detalle-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .galeria-principal img {
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .galeria-miniaturas {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .detalle-precio,
+    .detalle-badge {
+        display: block;
+        margin: 10px 0;
+    }
+    
+    .galeria-principal img {
+        height: 250px;
+    }
+    
+    .render-3d {
+        height: 300px;
+    }
+}
